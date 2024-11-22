@@ -1,14 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-link to="/crear">Crear</router-link>
-    <router-link to="/editar">Editar</router-link>
-    <router-link to="/listar">Listar</router-link>
-
-  </nav>
-  <router-view/>
+  <div id="app">
+    <h1>Gestión de Comunas</h1>
+    <ComunaList />
+  </div>
 </template>
+
+<script>
+import ComunaList from './components/ComunaList.vue';
+
+export default {
+  components: {
+    ComunaList,
+  },
+};
+</script>
+
 
 <style>
 #app {
