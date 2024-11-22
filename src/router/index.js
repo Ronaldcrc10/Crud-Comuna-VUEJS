@@ -8,24 +8,20 @@ import Listar from '../components/Listar.Vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'Home',
+    component: ComunaList, 
   },
   {
-    path: '/crear',
-    name: 'Crear',
-    component: HomeView
+    path: '/comunas',
+    name: 'Comunas',
+    component: ComunaList,
   },
-  {
-    path: '/editar',
-    name: 'Editar',
-    component: HomeView
-  },
-  {
-    path: '/listar',
-    name: 'Listar',
-    component: HomeView
-  },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
   {
     path: '/about',
     name: 'about',
